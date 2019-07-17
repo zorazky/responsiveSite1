@@ -8,7 +8,7 @@
 :root {
     --clr-text: #5a5a5a;
     --clr-primary: #067e0a;
-    --clr-accent: #764981;
+    --clr-accent: #613b6b;
 
     --ff-title: sans-serif ;
     --ff-serif: 'Times New Roman', Times, serif;
@@ -21,11 +21,12 @@ html {
     box-sizing: border-box;
     font-family: var(--ff-title);
     color: var(--clr-text);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 
 body {
     margin: 0;
+    text-align: center;
 }
 
 img { 
@@ -45,6 +46,7 @@ h1, h2, h3, h4 ,p {
 h2, h3 {
     font-family: var(--ff-title);
     line-height: 0.8;
+    letter-spacing: 1px;
 }
 
 h2 {
@@ -53,6 +55,15 @@ h2 {
 
 p {
     margin-bottom: 0.85rem;
+}
+
+.section-title-small {
+    font-size: 3rem;
+}
+
+.section-title-small small {
+    font-size: 0.7em;
+    display: block;
 }
 
 .logo {
@@ -95,6 +106,21 @@ nav a:focus  {
 }
 
 /* buttons */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: .75em 2.5em;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--clr-primary);
+}
 
 /* Homepage Styles */
 
@@ -106,6 +132,18 @@ nav a:focus  {
     background-size:cover; 
 }
 
-.intro {
-    text-align: center;
+.about-us {
+    background: var(--clr-accent);
+    display:flex;
+    flex-direction: column;
+    color: white;
+    padding: 0;
+}
+
+.about-us__intro {
+    padding: 3em 1em 1em;
+}
+
+.about-us__body {
+    padding: 1.5em  1em 3em;
 }
