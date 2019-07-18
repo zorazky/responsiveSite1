@@ -63,6 +63,10 @@ p {
     margin-bottom: 0.85rem;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
 .section-title-small {
     font-size: 3rem;
 }
@@ -112,11 +116,15 @@ nav a:focus  {
 }
 
 /* buttons */
+
+
 .btn-group {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+
 
 .btn {
     padding: .75em 2.5em;
@@ -180,12 +188,18 @@ nav a:focus  {
 .products   {
     display: flex;
     flex-direction: column;
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
 .product {
     border-radius: 1em;
     overflow:hidden;
     box-shadow: 0 0 1em rgb(0, 0, 0, 0.1);
+}
+
+.product:last-of-type {
+    margin-bottom: 2em;
 }
 
 .product__content {
@@ -204,6 +218,8 @@ footer {
     color: white;
     display: flex;
     margin-bottom: 0;
+    justify-content: center;
+    gap: 5em;
 }
 
 footer a {
@@ -222,6 +238,78 @@ footer a {
 .footer-social a {
     padding: 0.75em;
     text-decoration: none;
+}
+
+@media only screen and (min-width: 750px) {
+    section {
+        padding: 6em 1em;
+    }
+
+    .btn-group {
+        margin-top: 1em;
+        flex-direction: row;
+    }
+
+    .btn + .btn {
+        margin-left:0.5em;
+    }
+
+    .about-us {
+        flex-direction: row;
+    }
+
+    .about-us__intro,
+    .about-us__body {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 4em 2em;
+        justify-content:center;
+    }
+
+    .about-us__intro {
+        text-align: right;
+    }
+
+    .about-us__intro > * {
+        max-width: 27rem;
+        margin-left: auto;
+    }
+
+    .about-us__body {
+        text-align: left;
+    }
+
+    .about-us__body > * {
+        max-width: 27rem;
+        margin-right: auto;
+    }
+
+    .order-online > * {
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .products {
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    .product {
+        margin: 0;
+        flex: 0 1 33%;
+    }
+
+    .product + .product {
+        margin-left: 1em;
+    }
+
+    .product:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    
 }
 
 
